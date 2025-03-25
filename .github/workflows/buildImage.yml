@@ -7,6 +7,7 @@ env:
   IMG_REPO_URL: ghcr.io/jose-d/rocky9_baseBuildImage
   GLOBAL_VARS_FILE: global_vars.txt
   NVML_VERSION: 12-6
+  BASEIMAGE_URL: ghcr.io/jose-d/rocky9_baseBuildImage:latest
 
 jobs:
 
@@ -33,4 +34,4 @@ jobs:
       with:
         context: "{{defaultContext}}"
         push: true
-        tags: "latest"
+        tags: ${{ env.BASEIMAGE_URL }}
