@@ -1,5 +1,5 @@
 name: Build base Rocky Linux 9 docker image
-run-name: ${{ github.actor }} is attempting to build slurm docker image 🚀
+run-name: ${{ github.actor }} is attempting to build base docker image 🚀
 on: workflow_dispatch
 permissions: write-all
 env:
