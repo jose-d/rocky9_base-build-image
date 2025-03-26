@@ -4,9 +4,6 @@ on: workflow_dispatch
 permissions: write-all
 env:
   # github image repository url - used to cache docker images
-  IMG_REPO_URL: ghcr.io/jose-d/rocky9_base-build-image
-  GLOBAL_VARS_FILE: global_vars.txt
-  NVML_VERSION: 12-6
   BASEIMAGE_URL: ghcr.io/jose-d/rocky9_base-build-image:latest
 
 jobs:
