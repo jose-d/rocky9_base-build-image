@@ -2,12 +2,7 @@ name: Build base Rocky Linux 9 docker image
 run-name: ${{ github.actor }} is attempting to build base docker image 🚀
 on: workflow_dispatch
 permissions: write-all
-env:
-  # github image repository url - used to cache docker images
-  BASEIMAGE_URL: ghcr.io/jose-d/rocky9_base-build-image:latest
-
 jobs:
-
   build_base9_build-image:
     name: Build base docker image for Rocky9
     runs-on: ubuntu-latest
@@ -31,4 +26,4 @@ jobs:
       with:
         context: "{{defaultContext}}"
         push: true
-        tags: ${{ env.BASEIMAGE_URL }}
+        tags: ghcr.io/${{ github.repository }}:latest
